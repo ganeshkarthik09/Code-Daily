@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- Unordered list -->
+      <ul>
+        <li>
+          Chess
+          <ul>
+            <li>Strength: Excellent</li>
+            <li>Scope: Good</li>
+          </ul>
+        </li>
+        <li>
+          Cricket
+          <ul>
+            <li>Strength: Excellent</li>
+            <li>Scope: None</li>
+          </ul>
+        </li>
+        <li>Kabaddi</li>
+      </ul>
+
+      <hr />
+
+      <!-- Ordered list -->
+      <ol>
+        <li>
+          Chess
+          <ol>
+            <li>Strength: Excellent</li>
+            <li>Scope: Good</li>
+          </ol>
+        </li>
+        <li>
+          Cricket
+          <ol>
+            <li>Strength: Excellent</li>
+            <li>Scope: None</li>
+          </ol>
+        </li>
+        <li>Kabaddi</li>
+      </ol>
+
+      <hr />
+
+      <!-- Table -->
+      <table>
+        <caption>
+          Student Table
+        </caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ganesh</td>
+            <td>123AD0039</td>
+          </tr>
+          <tr>
+            <td>ZORO</td>
+            <td>123AD0040</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <!-- Forms -->
+      <form action="/action.php">
+        <input type="text" placeholder="username" />
+        <br />
+        <input type="password" placeholder="password" />
+        <br />
+        <h5>Select Your class</h5>
+
+        <input type="radio" value="Class XI" name="class" id="classXI" />
+        <label for="classXI">Class XI</label>
+        <br />
+
+        <input type="radio" value="Class XII" name="class" id="classXII" />
+        <label for="classXII">Class XII</label>
+        <br />
+      </form>
+
+      <form>
+        <!-- Checkboxes -->
+        <h5>Select subject</h5>
+        <input type="checkbox" value="math" name="subject" id="math" />
+        <label for="math">Math</label>
+        <br />
+
+        <input type="checkbox" value="Physics" name="subject" id="physics" />
+        <label for="physics">Physics</label>
+        <br />
+
+        <input
+          type="checkbox"
+          value="Chemistry"
+          name="subject"
+          id="chemistry"
+        />
+        <label for="chemistry">Chemistry</label>
+        <br />
+
+        <input type="checkbox" value="Logic" name="subject" id="logic" />
+        <label for="logic">Logic</label>
+
+        select your city :
+
+        <select name="city">
+          <option value="Delhi">Delhi</option>
+          <option value="HYD">HYD</option>
+          <option value="Pune">Pune</option>
+        </select>
+        <br /><br />
+
+        <textarea
+          name="feedback"
+          id="101"
+          placeholder="Please give feedback"
+        ></textarea>
+        <br /><br />
+        <input type="submit" value="submit" />
+      </form>
+    </main>
+  </body>
+</html>
