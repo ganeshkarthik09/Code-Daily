@@ -1,0 +1,32 @@
+h1{
+    color: blue;
+    background-color: yellow;
+}
+p{
+    color: darkblue;
+}
+button
+{
+    color:black;
+    background-color: turquoise;
+}
+body
+{
+    background-color:rgb(192, 34, 121);
+}
+
+/* ------Selectors-----*/
+
+*{
+    color: rgb(rgb(223, 111, 111), rgb(67, 145, 67), rgb(94, 94, 187));
+}
+#test0{
+    color: rebeccapurple;
+}
+#test1{
+    color: burlywood;
+}
+.testClass
+{
+    color: cornflowerblue;
+}
