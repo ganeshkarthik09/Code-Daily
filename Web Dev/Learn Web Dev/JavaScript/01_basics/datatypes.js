@@ -242,3 +242,49 @@ console.log(typeof null);           // object
 console.log(typeof undefined);      // undefined
 console.log(typeof []);             // object
 console.log(typeof function(){});   // function
+/* ======================================================
+   MEMORY STORAGE IN JAVASCRIPT: Stack vs Heap
+   ======================================================
+
+   1. Stack Memory (Primitive Types)
+   ------------------------------------------------------
+   * Who uses it?  => String, Number, Boolean, null, undefined, Symbol, BigInt
+   * How it works? => It gives you a COPY of the value.
+   * Result:       => Changing the copy DOES NOT change the original.
+*/
+
+// --- Stack Example ---
+let myYoutubename = "hiteshchoudharydotcom";
+let anothername = myYoutubename; // You get a fresh COPY of the value
+
+anothername = "chaiaurcode"; // Changing the copy
+
+console.log(myYoutubename); // Output: "hiteshchoudharydotcom" (Original remains same)
+console.log(anothername);   // Output: "chaiaurcode" (Only copy changed)
+
+
+/* 2. Heap Memory (Non-Primitive Types)
+   ------------------------------------------------------
+   * Who uses it?  => Arrays, Objects, Functions
+   * How it works? => It gives you a REFERENCE (Pointer) to the original value.
+   * Result:       => Changing the copy ALSO CHANGES the original.
+*/
+
+// --- Heap Example ---
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+};
+
+let userTwo = userOne; // You get a REFERENCE to the same memory address
+
+userTwo.email = "ganesh@google.com"; // Changing data via the second variable
+
+console.log(userOne.email); // Output: "ganesh@google.com" (Original changed!)
+console.log(userTwo.email); // Output: "ganesh@google.com"
+
+/*
+   Takeaway:
+   - Primitives go to Stack => Safe to copy.
+   - Objects go to Heap    => Be careful, they are shared!
+*/
