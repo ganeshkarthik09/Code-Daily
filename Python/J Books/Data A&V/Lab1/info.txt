@@ -1,0 +1,3 @@
+Date: 25/07/2025
+Task: Do basic tasks on pandas
+HW: Work on 15 different datasets and solve in python.
