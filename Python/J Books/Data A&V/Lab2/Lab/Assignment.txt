@@ -1,0 +1,9 @@
+1. List the top 5 states that contributed the highest profit.
+2.Find out the total number of customers in each region
+3.Which customer has placed the highest number of orders
+4. Top 5 products with the highest discounts
+5. find our the average discount given in each sub-category
+6.Find out how much sales were made per category.
+7.List the profit generated for every shipping mode
+8..Which sub-category has the lowest average profit?
+9. Which product had the highest total profit?
