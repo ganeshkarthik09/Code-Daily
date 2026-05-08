@@ -1,0 +1,6 @@
+*.exe
+*.out
+*.o
+*.log
+tournament_save.txt
+results.txt
