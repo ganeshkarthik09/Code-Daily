@@ -35,20 +35,52 @@ const ll MOD = 1e9 + 7;  // 998244353
 #define debug(x)
 #endif
 
+long long faah(long long a, long long b, long long x) {
+  if (a == b) return 0;
+  if (a < b) {
+    long long c = b;
+    b = a;
+    a = c;
+  }
+  long long r = a - b;
+  r = min(faah(a / x, b, x) + 1, r);
+  // r=min(faah(a/x,b/x,x)+2,r);
+  return r;
+}
+
+long long fa(long long a, long long b, long long x) {
+  long long r = 0;
+  if (a == b) return 0;
+  if (a < b) {
+    long long c = b;
+    b = a;
+    a = c;
+  }
+  if (x == 1) return a - b;
+
+  while (a - b > abs(a / x - b)) {
+    // cout<<a<<" "<<b<<" "<<x<<" "<<endl;
+    a /= x;
+    r++;
+    if (a < b) {
+      long long c = b;
+      b = a;
+      a = c;
+    }
+  }
+  return r + (a - b);
+}
 void solve() {
   // Your logic goes here
   long long a, b, x;
   cin >> a >> b >> x;
-  long long diff = abs(a - b);
-  if (diff == 0) cout << 0 << endl;
-  if (diff == 1) cout << 1 << endl;
-  if (x >= a && x >= b) cout << 2 << endl;
-  else cout<<"Pata Ni"<<endl;
+  // cout<<a<<" "<<b<<" "<<x<<" "<<endl;
+  long long diff = faah(a, b, x);
+  cout << diff << " " << endl;
 }
 
 int main() {
   FAST_IO
-
   int t = 1;
   cin >> t;  // Comment this out if the problem has only 1 test case
   while (t--) {
